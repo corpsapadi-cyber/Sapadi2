@@ -3,205 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAPADI | Asistencia Vial Exprés</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>SAPADI | Asistencia Vial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
-        :root {
-            --bg-principal: #0d0e12;
-            --bg-tarjeta: rgba(255, 255, 255, 0.03);
-            --borde-premium: rgba(255, 255, 255, 0.08);
-            --amarillo-sapadi: #ffcc00;
-            --verde-online: #2ecc71;
-            --texto-secundario: #a0aec0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
         body {
-            background: radial-gradient(circle at top, #1a1c23 0%, var(--bg-principal) 100%);
-            color: #ffffff;
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            padding-bottom: 100px;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            padding-bottom: 90px;
         }
 
         .container {
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Encabezado e Identidad */
-        .header {
+        /* Logo Box Original */
+        .logo-container {
             text-align: center;
-            padding: 20px 0 10px 0;
+            margin-bottom: 30px;
         }
-
-        .logo-box {
-            background: #000;
-            border: 2px solid var(--amarillo-sapadi);
-            border-radius: 12px;
+        .logo-mock {
+            border: 3px solid #FFCC00;
+            background-color: #000;
             padding: 15px;
             display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-        }
-
-        .logo-placeholder {
-            font-weight: 800;
-            font-size: 1.8rem;
-            color: var(--amarillo-sapadi);
+            font-family: 'Impact', sans-serif;
+            font-size: 2.2rem;
+            color: #FFCC00;
             letter-spacing: 2px;
         }
-        
-        .logo-placeholder span {
-            color: #fff;
+        .logo-mock span {
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
+            font-family: 'Inter', sans-serif;
+            color: #FFF;
+            font-weight: 900;
             letter-spacing: 1px;
-            margin-top: 5px;
+            margin-top: 2px;
         }
 
-        /* Badge Online */
-        .status-badge {
+        /* Badge Operadores */
+        .badge-online {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(46, 204, 113, 0.1);
-            border: 1px solid var(--verde-online);
-            color: var(--verde-online);
-            padding: 6px 16px;
+            gap: 6px;
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 20px;
         }
+        .dot { width: 8px; height: 8px; background: #2ecc71; border-radius: 50%; }
 
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--verde-online);
-            border-radius: 50%;
-            animation: pulso 1.8s infinite;
-        }
-
-        @keyframes pulso {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(46, 204, 113, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
-        }
-
+        /* Títulos de Alto Impacto */
         h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #ffffff 40%, var(--amarillo-sapadi) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2.1rem;
+            line-height: 1.1;
+            text-align: center;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
         }
-
-        .subtitulo {
-            color: var(--texto-secundario);
+        .text-yellow { color: #FFCC00; }
+        
+        .sub-p {
+            color: #8a8a93;
+            text-align: center;
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            line-height: 1.4;
+            margin-bottom: 30px;
         }
 
-        /* Botones Principales */
-        .cta-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 35px;
-        }
-
+        /* Botones de Acción Obligatorios */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
+            width: 100%;
             padding: 16px;
-            border-radius: 14px;
+            border-radius: 30px;
             font-weight: 700;
             font-size: 1rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            margin-bottom: 12px;
         }
+        .btn-green { background-color: #2ecc71; color: #fff; }
+        .btn-dark { background-color: #1c1c1e; color: #fff; border: 1px solid #2c2c2e; }
 
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
-        }
-
-        .btn-llamar {
-            background: #1a1c23;
-            color: white;
-            border: 1px solid var(--borde-premium);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
-        /* Grid de Zonas Activas */
-        .seccion-titulo {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .zonas-grid {
+        /* Grid de Zonas Inactivas/Activas */
+        .grid-zonas {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin-bottom: 20px;
+            margin: 25px 0;
         }
-
-        .zona-card {
-            background: var(--bg-tarjeta);
-            border: 1px solid var(--borde-premium);
-            backdrop-filter: blur(10px);
-            padding: 12px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+        .zona-box {
+            background-color: #1c1c1e;
+            border: 1px solid #2c2c2e;
+            padding: 15px;
+            border-radius: 10px;
         }
+        .zona-box h4 { font-size: 1rem; font-weight: 700; }
+        .zona-box span { color: #2ecc71; font-size: 0.75rem; display: flex; align-items: center; gap: 4px; margin-top: 4px;}
 
-        .zona-nombre {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .zona-status {
-            font-size: 0.75rem;
-            color: var(--verde-online);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .tiempo-estimado-box {
-            background: rgba(255, 204, 0, 0.05);
-            border: 1px dashed var(--amarillo-sapadi);
+        /* Tiempo Estimado Box */
+        .tiempo-box {
+            background-color: #1c1c1e;
             border-radius: 12px;
             padding: 15px;
             display: flex;
@@ -209,228 +127,92 @@
             align-items: center;
             margin-bottom: 40px;
         }
+        .tiempo-box p { font-size: 0.85rem; color: #8a8a93; }
+        .tiempo-num { font-size: 1.8rem; font-weight: 900; color: #FFCC00; }
 
-        .tiempo-texto {
-            font-size: 0.85rem;
-            color: var(--texto-secundario);
+        /* SECCIÓN SERVICIOS PREMIUM */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
-
-        .tiempo-numero {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--amarillo-sapadi);
-        }
-
-        /* Tarjetas de Servicios */
-        .servicio-card {
-            background: var(--bg-tarjeta);
-            border: 1px solid var(--borde-premium);
-            border-radius: 16px;
+        
+        .card-servicio {
+            background-color: #0a0a0a;
+            border: 1px solid #1c1c1e;
+            border-radius: 14px;
             overflow: hidden;
             margin-bottom: 25px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
         }
-
-        .servicio-img-wrapper {
+        
+        .img-container {
             position: relative;
-            height: 180px;
-            width: 100%;
-            overflow: hidden;
+            height: 200px;
+            background-color: #111; /* Fondo de carga si no encuentra la foto */
         }
-
-        .servicio-img {
+        
+        .img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .precio-badge {
+        
+        .price-tag {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #000;
-            border: 1px solid var(--amarillo-sapadi);
-            color: var(--amarillo-sapadi);
+            top: 12px;
+            right: 12px;
+            background-color: #FFCC00;
+            color: #000;
+            font-weight: 900;
             padding: 6px 12px;
-            border-radius: 8px;
-            font-weight: 700;
+            border-radius: 6px;
             font-size: 0.9rem;
         }
 
-        .servicio-info {
-            padding: 20px;
-        }
-
-        .servicio-titulo-flex {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .servicio-icon {
-            color: var(--amarillo-sapadi);
-            font-size: 1.1rem;
-        }
-
-        .servicio-nombre {
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .servicio-desc {
-            color: var(--texto-secundario);
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .btn-seleccionar {
+        .card-body { padding: 20px; }
+        .card-body h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .card-body p { color: #8a8a93; font-size: 0.85rem; line-height: 1.4; margin-bottom: 15px; }
+        
+        .btn-select {
             width: 100%;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--borde-premium);
+            background-color: #1c1c1e;
             color: #fff;
-            padding: 10px;
+            border: 1px solid #2c2c2e;
+            padding: 12px;
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s;
         }
+        .btn-select:hover { background-color: #FFCC00; color: #000; }
 
-        .btn-seleccionar:hover {
-            background: var(--amarillo-sapadi);
-            color: #000;
-            border-color: var(--amarillo-sapadi);
-        }
-
-        /* Características Por Qué Elegirnos */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 35px 0;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255,255,255,0.01);
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .feature-item i {
-            color: var(--amarillo-sapadi);
-            font-size: 1rem;
-        }
-
-        .feature-text {
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Pasos del Proceso */
-        .proceso-box {
-            background: var(--bg-tarjeta);
-            border: 1px solid var(--borde-premium);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 40px;
-        }
-
-        .paso-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .paso-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 35px;
-            bottom: -15px;
-            width: 2px;
-            background: var(--borde-premium);
-        }
-
-        .paso-numero {
-            width: 32px;
-            height: 32px;
-            background: var(--amarillo-sapadi);
-            color: #000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-
-        .paso-contenido h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .paso-contenido p {
-            color: var(--texto-secundario);
-            font-size: 0.8rem;
-        }
-
-        /* Testimonios */
-        .testimonio-card {
-            background: rgba(255,255,255,0.02);
-            border-left: 3px solid var(--amarillo-sapadi);
-            padding: 15px;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 15px;
-        }
-
-        .estrellas {
-            color: #ffaa00;
-            font-size: 0.8rem;
-            margin-bottom: 6px;
-        }
-
-        .testimonio-txt {
-            font-size: 0.85rem;
-            italic: true;
-            color: #e2e8f0;
-            margin-bottom: 8px;
-        }
-
-        .testimonio-autor {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--texto-secundario);
-        }
-
-        /* Barra de acción fija inferior para móviles */
-        .fixed-action-bar {
+        /* Barra Fija Inferior */
+        .footer-sticky {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(13, 14, 18, 0.85);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid var(--borde-premium);
+            background-color: #000;
+            border-top: 1px solid #1c1c1e;
             padding: 12px;
-            z-index: 999;
             display: flex;
             justify-content: center;
+            z-index: 999;
         }
-
-        .fixed-action-bar .btn {
+        .btn-sticky {
             width: 100%;
-            max-width: 460px;
+            max-width: 440px;
+            background-color: #2ecc71;
+            color: white;
             padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -438,186 +220,90 @@
 
     <div class="container">
         
-        <header class="header">
-            <div class="logo-box">
-                <div class="logo-placeholder">
-                    ⚡ SAPADI
-                    <span>ASISTENCIA VIAL EXPRÉS</span>
-                </div>
-            </div>
-            
-            <br>
-            <div class="status-badge">
-                <span class="status-dot"></span> Operadores en línea
-            </div>
-
-            <h1>¿Te quedaste tirado?<br>¡SAPADI ha llegado!</h1>
-            <p class="subtitulo">Asistencia vial exprés en Monterrey y Área Metropolitana. Llegamos a ti sin complicaciones.</p>
-        </header>
-
-        <div class="cta-buttons">
-            <a href="https://wa.me/523335615541?text=Hola%20SAPADI,%20necesito%20asistencia%20vial%20urgente" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp fa-lg"></i> Solicitar ayuda ahora
-            </a>
-            <a href="tel:3335615541" class="btn btn-llamar">
-                <i class="fas fa-phone-alt"></i> Llamar operador — 333 561 5541
-            </a>
-        </div>
-
-        <h3 class="seccion-titulo"><i class="fas fa-map-marker-alt"></i> Cobertura Actual</h3>
-        <div class="zonas-grid">
-            <div class="zona-card">
-                <span class="zona-nombre">Monterrey</span>
-                <span class="zona-status"><i class="fas fa-circle" style="font-size:0.5rem"></i> Zona activa</span>
-            </div>
-            <div class="zona-card">
-                <span class="zona-nombre">Guadalupe</span>
-                <span class="zona-status"><i class="fas fa-circle" style="font-size:0.5rem"></i> Zona activa</span>
-            </div>
-            <div class="zona-card">
-                <span class="zona-nombre">San Nicolás</span>
-                <span class="zona-status"><i class="fas fa-circle" style="font-size:0.5rem"></i> Zona activa</span>
-            </div>
-            <div class="zona-card">
-                <span class="zona-nombre">Apodaca</span>
-                <span class="zona-status"><i class="fas fa-circle" style="font-size:0.5rem"></i> Zona activa</span>
+        <div class="logo-container">
+            <div class="logo-mock">
+                SAPADI
+                <span>ASISTENCIA VIAL EXPRÉS</span>
             </div>
         </div>
 
-        <div class="tiempo-estimado-box">
-            <span class="tiempo-texto">Tiempo estimado de llegada<br>para tu zona:</span>
-            <span class="tiempo-numero">15-20 min</span>
+        <div style="text-align: center;">
+            <div class="badge-online"><span class="dot"></span> Operadores en línea</div>
         </div>
 
-        <h3 class="seccion-titulo"><i class="fas fa-tools"></i> Elige tu Servicio</h3>
-        <p class="subtitulo" style="margin-top:-10px; margin-bottom:20px;">Tarifas transparentes. Sin sorpresas al final.</p>
+        <h1>¿TE QUEDASTE TIRADO?<br><span class="text-yellow">¡SAPADI HA LLEGADO!</span></h1>
+        <p class="sub-p">Asistencia vial exprés en Monterrey y Área Metropolitana. Llegamos a ti.</p>
 
-        <div class="servicio-card">
-            <div class="servicio-img-wrapper">
-                <img class="servicio-img" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600" alt="Paso de corriente">
-                <span class="precio-badge">$350 MXN</span>
-            </div>
-            <div class="servicio-info">
-                <div class="servicio-titulo-flex">
-                    <i class="fas fa-bolt servicio-icon"></i>
-                    <h4 class="servicio-nombre">Paso de Corriente</h4>
-                </div>
-                <p class="servicio-desc">Arranque rápido mediante booster profesional de última generación. Te ponemos en marcha en minutos sin arriesgar tu computadora.</p>
-                <a href="https://wa.me/523335615541?text=Necesito%20Paso%20de%20Corriente" class="btn-seleccionar" style="text-decoration:none; display:block; text-align:center;">Seleccionar servicio</a>
-            </div>
+        <div style="margin-bottom: 30px;">
+            <a href="https://wa.me/523335615541" class="btn btn-green"><i class="fab fa-whatsapp"></i> Solicitar ayuda ahora</a>
+            <a href="tel:3335615541" class="btn btn-dark"><i class="fas fa-phone"></i> Llamar operador — 333 561 5541</a>
         </div>
 
-        <div class="servicio-card">
-            <div class="servicio-img-wrapper">
-                <img class="servicio-img" src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=600" alt="Diagnóstico de batería">
-                <span class="precio-badge">$250 MXN</span>
-            </div>
-            <div class="servicio-info">
-                <div class="servicio-titulo-flex">
-                    <i class="fas fa-file-medical-alt servicio-icon"></i>
-                    <h4 class="servicio-nombre">Diagnóstico de Batería</h4>
-                </div>
-                <p class="servicio-desc">Revisión completa de la vida útil de tu batería y el correcto funcionamiento del sistema eléctrico / alternador con escáner especializado.</p>
-                <a href="https://wa.me/523335615541?text=Necesito%20Diagnóstico%20de%20Batería" class="btn-seleccionar" style="text-decoration:none; display:block; text-align:center;">Seleccionar servicio</a>
-            </div>
+        <!-- Cobertura -->
+        <div class="grid-zonas">
+            <div class="zona-box"><h4>Monterrey</h4><span><i class="fas fa-circle" style="font-size: 6px;"></i> Zona activa</span></div>
+            <div class="zona-box"><h4>Guadalupe</h4><span><i class="fas fa-circle" style="font-size: 6px;"></i> Zona activa</span></div>
+            <div class="zona-box"><h4>San Nicolás</h4><span><i class="fas fa-circle" style="font-size: 6px;"></i> Zona activa</span></div>
+            <div class="zona-box"><h4>Apodaca</h4><span><i class="fas fa-circle" style="font-size: 6px;"></i> Zona activa</span></div>
         </div>
 
-        <div class="servicio-card">
-            <div class="servicio-img-wrapper">
-                <img class="servicio-img" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600" alt="Cambio de llanta">
-                <span class="precio-badge">$300 MXN</span>
+        <div class="tiempo-box">
+            <p>Tiempo estimado de llegada<br>para tu zona</p>
+            <div class="tiempo-num">15-20 <span style="font-size: 1rem; color:#fff;">min</span></div>
+        </div>
+
+        <h2 class="section-title">Elige tu servicio</h2>
+
+        <!-- Servicio 1 -->
+        <div class="card-servicio">
+            <div class="img-container">
+                <!-- REEMPLAZA "paso_corriente.jpg" POR TU ARCHIVO REAL -->
+                <img src="paso_corriente.jpg" alt="Paso de Corriente">
+                <span class="price-tag">$350 MXN</span>
             </div>
-            <div class="servicio-info">
-                <div class="servicio-titulo-flex">
-                    <i class="fas fa-wrench servicio-icon"></i>
-                    <h4 class="servicio-nombre">Cambio de Llanta</h4>
-                </div>
-                <p class="servicio-desc">Cambio seguro utilizando gato hidráulico de perfil bajo y pistola de impacto profesional de torque exacto. Rápido y limpio.</p>
-                <a href="https://wa.me/523335615541?text=Necesito%20Cambio%20de%20Llanta" class="btn-seleccionar" style="text-decoration:none; display:block; text-align:center;">Seleccionar servicio</a>
+            <div class="card-body">
+                <h3><i class="fas fa-bolt text-yellow"></i> Paso de Corriente</h3>
+                <p>Arranque rápido mediante booster profesional de última generación. Te ponemos en marcha en minutos.</p>
+                <button class="btn-select">Seleccionar servicio</button>
             </div>
         </div>
 
-        <div class="servicio-card">
-            <div class="servicio-img-wrapper">
-                <img class="servicio-img" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600" alt="Inflado y calibración">
-                <span class="precio-badge">$200 MXN</span>
+        <!-- Servicio 2 -->
+        <div class="card-servicio">
+            <div class="img-container">
+                <!-- REEMPLAZA "diagnostico.jpg" POR TU ARCHIVO REAL -->
+                <img src="diagnostico.jpg" alt="Diagnóstico de Batería">
+                <span class="price-tag">$250 MXN</span>
             </div>
-            <div class="servicio-info">
-                <div class="servicio-titulo-flex">
-                    <i class="fas fa-compress-arrows-alt servicio-icon"></i>
-                    <h4 class="servicio-nombre">Inflado y Calibración</h4>
-                </div>
-                <p class="servicio-desc">Inflado preciso con compresor portátil digital de alto flujo a los PSI indicados por el fabricante para tu seguridad al conducir.</p>
-                <a href="https://wa.me/523335615541?text=Necesito%20Inflado%20y%20Calibración" class="btn-seleccionar" style="text-decoration:none; display:block; text-align:center;">Seleccionar servicio</a>
-            </div>
-        </div>
-
-        <div class="features-grid">
-            <div class="feature-item"><i class="fas fa-id-card"></i> <span class="feature-text">Operador identificado</span></div>
-            <div class="feature-item"><i class="fas fa-camera"></i> <span class="feature-text">Evidencia fotográfica</span></div>
-            <div class="feature-item"><i class="fas fa-search-dollar"></i> <span class="feature-text">Precios transparentes</span></div>
-            <div class="feature-item"><i class="fas fa-shipping-fast"></i> <span class="feature-text">Atención express</span></div>
-            <div class="feature-item"><i class="fas fa-shield-alt"></i> <span class="feature-text">Seguridad primero</span></div>
-            <div class="feature-item"><i class="fas fa-comments"></i> <span class="feature-text">Comunicación constante</span></div>
-        </div>
-
-        <h3 class="seccion-titulo"><i class="fas fa-info-circle"></i> ¿Cómo funciona?</h3>
-        <p class="subtitulo" style="margin-top:-10px; margin-bottom:20px;">Del mensaje a la solución en minutos.</p>
-        
-        <div class="proceso-box">
-            <div class="paso-item">
-                <div class="paso-numero">1</div>
-                <div class="paso-contenido">
-                    <h4>Solicitud</h4>
-                    <p>Selecciona tu servicio y envíanos tu ubicación por WhatsApp. Sin apps ni molestos registros.</p>
-                </div>
-            </div>
-            <div class="paso-item">
-                <div class="paso-numero">2</div>
-                <div class="paso-contenido">
-                    <h4>Despacho</h4>
-                    <p>Confirmamos la solicitud en segundos y mandamos al operador más cercano disponible en tu zona.</p>
-                </div>
-            </div>
-            <div class="paso-item">
-                <div class="paso-numero">3</div>
-                <div class="paso-contenido">
-                    <h4>Operador en camino</h4>
-                    <p>Recibes el perfil de la persona asignada. Sabrás exactamente quién va y monitoreamos todo en tiempo real.</p>
-                </div>
-            </div>
-            <div class="paso-item">
-                <div class="paso-numero">4</div>
-                <div class="paso-contenido">
-                    <h4>Servicio Completado</h4>
-                    <p>El técnico soluciona tu problema, documenta con foto de respaldo y ¡listo para que sigas tu camino!</p>
-                </div>
+            <div class="card-body">
+                <h3><i class="fas fa-heart-beat text-yellow"></i> Diagnóstico de Batería</h3>
+                <p>Revisión completa de batería y sistema eléctrico directamente en tu ubicación.</p>
+                <button class="btn-select">Seleccionar servicio</button>
             </div>
         </div>
 
-        <h3 class="seccion-titulo"><i class="fas fa-star"></i> Lo que dicen nuestros clientes</h3>
-        <br>
-        
-        <div class="testimonio-card">
-            <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="testimonio-txt">"Se me fue la batería en Av. Constitución a las 11 de la noche. SAPADI llegó en menos de 20 minutos, el chavo súper profesional y arrancó el carro en un segundo."</p>
-            <span class="testimonio-autor">Carlos R. — Monterrey Centro</span>
-        </div>
-
-        <div class="testimonio-card">
-            <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="testimonio-txt">"Ponchadura saliendo a Guadalupe. Mandé WhatsApp y en 18 min ya los tenía ahí. Todo súper limpio, documentado con fotos. Altamente recomendado."</p>
-            <span class="testimonio-autor">Mayra L. — Guadalupe</span>
+        <!-- Servicio 3 -->
+        <div class="card-servicio">
+            <div class="img-container">
+                <!-- REEMPLAZA "cambio_llanta.jpg" POR TU ARCHIVO REAL -->
+                <img src="cambio_llanta.jpg" alt="Cambio de Llanta">
+                <span class="price-tag">$300 MXN</span>
+            </div>
+            <div class="card-body">
+                <h3><i class="fas fa-wrench text-yellow"></i> Cambio de Llanta</h3>
+                <p>Cambio seguro con gato hidráulico y herramienta profesional. Rápido y sin daños.</p>
+                <button class="btn-select">Seleccionar servicio</button>
+            </div>
         </div>
 
     </div>
 
-    <div class="fixed-action-bar">
-        <a href="https://wa.me/523335615541?text=Hola%20SAPADI,%20necesito%20asistencia%20vial%20urgente" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp fa-lg"></i> Auxilio Vial Exprés Aquí
+    <!-- Barra fija inferior idéntica al video -->
+    <div class="footer-sticky">
+        <a href="https://wa.me/523335615541" class="btn-sticky">
+            <i class="fab fa-whatsapp"></i> Solicitar por WhatsApp
         </a>
     </div>
 
 </body>
 </html>
-
